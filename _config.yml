@@ -104,7 +104,7 @@ theme: hexo-icer
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/Giagoo/Giagoo.github.io.git
+  repo: https://github.com/Giagoo/giagoo.github.io.git
 
 # Search
 search:
