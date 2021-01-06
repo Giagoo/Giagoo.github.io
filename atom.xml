@@ -6,7 +6,7 @@
   <link href="https://giagoo.github.io/atom.xml" rel="self"/>
   
   <link href="https://giagoo.github.io/"/>
-  <updated>2021-01-05T12:31:42.000Z</updated>
+  <updated>2021-01-06T14:03:54.353Z</updated>
   <id>https://giagoo.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="https://giagoo.github.io/2021/01/06/test/"/>
+    <id>https://giagoo.github.io/2021/01/06/test/</id>
+    <published>2021-01-06T14:03:30.000Z</published>
+    <updated>2021-01-06T14:03:54.353Z</updated>
+    
+    <content type="html"><![CDATA[<p>测试</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;测试&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>2020/11/24</title>
@@ -402,29 +423,6 @@
       
       
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://github.com/Giagoo/Blog-s_Photos/blob/master/Work/Vampire.jpg?raw=true&quot; alt=&quot;吸血鬼&quot;&gt;&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-    <category term="作品" scheme="https://giagoo.github.io/tags/%E4%BD%9C%E5%93%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>能量电池</title>
-    <link href="https://giagoo.github.io/2020/02/23/%E8%83%BD%E9%87%8F%E7%94%B5%E6%B1%A0/"/>
-    <id>https://giagoo.github.io/2020/02/23/%E8%83%BD%E9%87%8F%E7%94%B5%E6%B1%A0/</id>
-    <published>2020-02-23T06:58:14.000Z</published>
-    <updated>2021-01-05T12:31:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://github.com/Giagoo/Blog-s_Photos/blob/master/Work/Energy%20battery.jpg?raw=true" alt="能量电池"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://github.com/Giagoo/Blog-s_Photos/blob/master/Work/Energy%20battery.jpg?raw=true&quot; alt=&quot;能量电池&quot;&gt;&lt;/p&gt;
 </summary>
       
     
