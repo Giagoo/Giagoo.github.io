@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  
-  <title>Blender2.79b | Hexo</title>
-  <meta name="description" content="A geeker blog." />
-  <meta name="keywords" content="hexo,theme,icer,ggice" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
+  </script>
+
   <meta name="description" content="索引记录的操作包括：视图、选择、模型、物体、UV、灯光、动画、雕刻、CG流程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Blender2.79b">
@@ -22,157 +32,170 @@
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary">
-  
-  
 
-  <link rel='stylesheet' href='//cdn.staticfile.org/nprogress/0.2.0/nprogress.css'/>
-  <link rel="stylesheet" href="//cdn.staticfile.org/highlight.js/9.15.10/styles/github-gist.min.css">
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_405585_yuudmyqpo3q.css">
-  <script src='//cdn.staticfile.org/nprogress/0.2.0/nprogress.min.js'></script>
-  <!-- <script>try{Typekit.load({ async: false });}catch(e){}</script> -->
-  
-<link rel="stylesheet" href="/style.css">
-
-  
-
-  
-
-<!-- baidu Analytics -->
-<script>
-  var _hmt = _hmt || [];
-  (function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?403460ed7637fb6c4a9e09a74e662ca0";
-    var s = document.getElementsByTagName("script")[0]; 
-    s.parentNode.insertBefore(hm, s);
-  })();
-  </script>
-  
-<!-- End baidu Analytics -->
+<link rel="canonical" href="http://example.com/2019/06/21/Blender2-79b/">
 
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
 
-<body>
+  <title>Blender2.79b | Hexo</title>
   
-  <script>NProgress.start();</script>
-  
-  <div id="site-wrapper">
-    
-    <header class="header">
-  <div class="header-wrapper">
-    <a href="/">
-      <img src="/image/logo.jpg" class="logo"/>
-      <!-- <span class="site-desc">
-        
-      </span> -->
-    </a>
-    <div class="social-wrapper">
-      
-        
-          <a href="https://twitter.com/iggice" class="social twitter" target="_blank" rel="external">
-            <span class="iconfont icon-twitter"></span>
-          </a>
-          
-          <a href="https://github.com/ggice" class="social github" target="_blank" rel="external">
-            <span class="iconfont icon-github"></span>
-          </a>
-          
-          <a href="http://ggice.lofter.com/" class="social lofter" target="_blank" rel="external">
-            <span class="iconfont icon-lofter"></span>
-          </a>
-          
-          <a href="https://dribbble.com/ggice" class="social dribbble" target="_blank" rel="external">
-            <span class="iconfont icon-dribbble"></span>
-          </a>
-          
-          <a href="mailto:i@ice.gs" class="social email" target="_blank" rel="external">
-            <span class="iconfont icon-email"></span>
-          </a>
-          
-          <a href="/atom.xml" class="social rss" target="_blank" rel="external">
-            <span class="iconfont icon-rss"></span>
-          </a>
-          
-      
-      
-      <a href="#" class="social search-do" target="_blank" rel="external">
-        <span class="iconfont icon-search"></span>
-      </a>
-            
-      <!-- <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://example.com"></form> -->
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-    <div class="search-wrap">
-      <div class="search-content animated fade-in">
-        <p class="search-input">
-          <span class="iconfont icon-search"></span>
-          <input tabindex="1">
-        </p>
-        <ul class="search-result">
-            
-              <div class="tags">
-                   <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/" rel="tag">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%9C%E5%93%81/" rel="tag">作品</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%90%90%E6%A7%BD/" rel="tag">吐槽</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%B8%E6%88%8F/" rel="tag">游戏</a></li></ul>
-                </div>
-            
-        </ul>
-      </div>
-    </div>
-    <nav class="header-nav">
-      
-        <a href="/" class="archives">
-          home
-        </a>
-        
-        <a href="/tags/web-development/" class="archives">
-          web development
-        </a>
-        
-        <a href="/tags/soft/" class="archives">
-          soft
-        </a>
-        
-        <a href="/tags/os/" class="archives">
-          os
-        </a>
-        
-        <a href="/archives" class="archives">
-          archives
-        </a>
-        
-        <a href="/README/" class="archives">
-          README
-        </a>
-        
-    </nav>
   </div>
-</header>
-    <script>NProgress.set(0.4);</script>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
     
-    <main id="main" role="main">
-      <article id="post-Blender2-79b"
-  class="post article white-box article-type-post animated fade-in-top"
-  itemscope itemprop="blogPost">
-  <section class="post-header article-header">
-    <h2 class="title">
-        <a href="/2019/06/21/Blender2-79b/">
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/06/21/Blender2-79b/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
           Blender2.79b
-        </a>
-      </h2>
-      <div class="subtitle">
-          <time>
-            Jun 21, 2019
-          </time>
-          
-            <span class="tags">
-                <span class="iconfont icon-tag"></span>
-                <a class="tag-none-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
               </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-06-21 23:53:18" itemprop="dateCreated datePublished" datetime="2019-06-21T23:53:18+08:00">2019-06-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-05 20:31:42" itemprop="dateModified" datetime="2021-01-05T20:31:42+08:00">2021-01-05</time>
+              </span>
+
           
-      </div>
-  </section>
-  <section class="content">
-    <div class="article-entry" itemprop="articleBody">
-      <h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><p>记录的操作包括：视图、选择、模型、物体、UV、灯光、动画、雕刻、CG流程</p>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><p>记录的操作包括：视图、选择、模型、物体、UV、灯光、动画、雕刻、CG流程</p>
 <a id="more"></a>
 
 <h2 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h2><p>移动视图：Ctrl+鼠标中键<br>旋转视图：鼠标中键<br>前/左/顶视图： 1/3/7<br>后/右/底视图:  Ctrl+1/3/7<br>进入/退出摄像机视角：0<br>正交/透视视图 ： 5<br>聚焦已选中物体： .（小键盘）<br>Home： 所有框架  </p>
@@ -187,65 +210,192 @@
 <h2 id="CG流程"><a href="#CG流程" class="headerlink" title="CG流程"></a>CG流程</h2><p>Sculpting或Hard Surface(模型面数：游戏：1000——2500，影视：100000——300000)<br>Retopology(重拓朴)<br>Uvwrap(展开Uv)<br>Texture(贴图)<br>Rig(绑定)<br>Skin(权重绘制)<br>Animation(动画)<br>Composite(合成)</p>
 
     </div>
-  </section>
 
-  
-  
-</article>
-      <script>NProgress.set(0.6);</script>
-    </main>
     
-    <footer class="footer">
-  <div class="footer-wrap">
-    <div class="footer-link">
-      
-      <h3>LINKS</h3>
-      <p>
-        
-          <a href="http://1x0.xyz/" target="_blank">Tian1x0</a>
-        
-          <a href="http://www.royalmice.com/hankzhou/" target="_blank">Hankzhou</a>
-        
-          <a href="http://sjydh.me/" target="_blank">设计有点货</a>
-        
-          <a href="https://developers.google.com/web/fundamentals/" target="_blank">Web fundamentals</a>
-        
-      </p>
-      
-    </div>
-    <div class="footer-tags">
-      
-        <h3>TAGS</h3>        
-        <div class="tags">
-             <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/" rel="tag">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%9C%E5%93%81/" rel="tag">作品</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%90%90%E6%A7%BD/" rel="tag">吐槽</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%B8%E6%88%8F/" rel="tag">游戏</a></li></ul>
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"># 学习笔记</a>
           </div>
-      
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/06/21/Javascript/" rel="prev" title="Javascript">
+      <i class="fa fa-chevron-left"></i> Javascript
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/06/21/%E4%B8%8A%E5%8F%A4%E5%8D%B7%E8%BD%B4%E4%BA%94%E7%89%B9%E5%88%AB%E7%89%88Mod%E5%AE%89%E8%A3%85/" rel="next" title="上古卷轴五特别版Mod安装">
+      上古卷轴五特别版Mod安装 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-    <div class="footer-info">
-        <div>Theme <span class="codename"><a href="https://github.com/GGICE/hexo-icer" target="_blank">icer</a></span> designed & coded by <a href="https://ice.gs/" target="_blank">GGICE</a></div>
-        <div>Copyright &copy; 2021, <a href="/">Hexo</a>  . All rights reserved .</div>
-      </div>
-  </div>
-</footer>
-
-
-    <script>NProgress.set(0.8);</script>
+      </footer>
     
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
-  <script src="//cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+  <aside class="sidebar">
+    <div class="sidebar-inner">
 
-<script src="/js/main.js"></script>
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B4%A2%E5%BC%95"><span class="nav-number">1.</span> <span class="nav-text">索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E5%9B%BE"><span class="nav-number">2.</span> <span class="nav-text">视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9"><span class="nav-number">3.</span> <span class="nav-text">选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B"><span class="nav-number">4.</span> <span class="nav-text">模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%A9%E4%BD%93"><span class="nav-number">5.</span> <span class="nav-text">物体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UV"><span class="nav-number">6.</span> <span class="nav-text">UV</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E7%94%BB"><span class="nav-number">7.</span> <span class="nav-text">动画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%95%E5%88%BB"><span class="nav-number">8.</span> <span class="nav-text">雕刻</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%81%AF%E5%85%89"><span class="nav-number">9.</span> <span class="nav-text">灯光</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CG%E6%B5%81%E7%A8%8B"><span class="nav-number">10.</span> <span class="nav-text">CG流程</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
 
 
-<!-- Commit -->
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
 
+      </div>
+    </main>
 
-  <script>
-    NProgress.done();
-  </script>
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
   
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
 </body>
 </html>
