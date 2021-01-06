@@ -127,20 +127,26 @@ hexo d
 
 ### 备份
 
-1. 新建一个新的本地分支：`git branch hexo`
+1. 创建新仓库，如果同名仓库之前已经创建，请将之前的仓库改名，新建的仓库必须是Username.github.io；  
 
-2. 切换至新分支：`git checkout hexo`
+2. 创建两个分支：master和hexo；  
 
-3. 将新分支Push至Github： `git push origin hexo`
+3. 设置hexo为默认分支；  
 
-4. 执行git add .、git commit -m ""、git push origin hexo来提交hexo网站源文件
+4. 将刚刚创建的新仓库clone至本地，将之前的hexo文件夹中的_config.yml，themes/，source/，scaffolds/，package.json，.gitignore复制至WincerChan.github.io文件夹；  
 
-5. 执行hexo g -d生成静态网页部署至Github上
+5. 将themes/next/(我用的是NexT主题)中的.git/删除，否则无法将主题文件夹push；  
+
+6. 在Yourname.github.io文件夹执行npm install和npm install hexo-deployer-git（这里可以看一看分支是不是显示为hexo）；  
+
+7. 执行git add .、git commit -m ""、git push origin hexo来提交hexo网站源文件；执行hexo g -d生成静态网页部署至Github上。  
 
 ### 恢复
 
-1. 使用git clone git@github.com:WincerChan/WincerChan.github.io.git将仓库拷贝至本地；
-2. 切换分支：git checkout hexo
+1. 使用git clone git@github.com:WincerChan/WincerChan.github.io.git将仓库拷贝至本地；  
+
+2. 切换分支：git checkout hexo  
+
 3. 在文件夹内执行以下命令`npm install hexo-cli -g`、`npm install`、`npm install hexo-deployer-git`。
 
 ## 对文章进行文件分类
@@ -150,5 +156,7 @@ hexo d
 ## fatal: refusing to merge unrelated histories解决
 
 原因是两个分支是两个不同的版本，具有不同的提交历史  
-git pull origin master --allow-unrelated-histories  
+
+git pull origin master --allow-unrelated-histories  (会将两个分支合并，慎用)  
+
 可以允许不相关历史提，强制合并  
