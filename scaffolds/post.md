@@ -3,6 +3,6 @@ title: {{ title }}
 date: {{ date }}
 tags:
 categories:
-copyright: 
-comments: 
+copyright: true
+comments: true
 ---

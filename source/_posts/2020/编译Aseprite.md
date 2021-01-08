@@ -49,3 +49,9 @@ please check it in :
     ninja aseprite
 
 4. wait it finish
+
+百度网盘：
+
+链接：<https://pan.baidu.com/s/1AHQhZBW-x_DB_FjJrL9DDQ>
+
+提取码：9527

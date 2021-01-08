@@ -137,9 +137,9 @@ hexo d
 
 5. 将themes/next/(我用的是NexT主题)中的.git/删除，否则无法将主题文件夹push；  
 
-6. 在Yourname.github.io文件夹执行npm install和npm install hexo-deployer-git（这里可以看一看分支是不是显示为hexo）；  
+6. 在Yourname.github.io文件夹执行`npm install`和`npm install hexo-deployer-git`（这里可以看一看分支是不是显示为hexo）；  
 
-7. 执行git add .、git commit -m ""、git push origin hexo来提交hexo网站源文件；执行hexo g -d生成静态网页部署至Github上。  
+7. 执行`git add` ,`git commit -m`,`git push origin hexo`来提交hexo网站源文件；执行hexo g -d生成静态网页部署至Github上。  
 
 ### 恢复
 
@@ -149,7 +149,7 @@ hexo d
 
 3. 在文件夹内执行以下命令`npm install hexo-cli -g`、`npm install`、`npm install hexo-deployer-git`。
 
-## 对文章进行文件分类
+## 对文章进行年份分类
 
 在_config.yml中将new_post_name:修改为： :year/:title
 
@@ -159,4 +159,4 @@ hexo d
 
 git pull origin master --allow-unrelated-histories  (会将两个分支合并，慎用)  
 
-可以允许不相关历史提，强制合并  
+可以允许不相关历史提，强制合并
