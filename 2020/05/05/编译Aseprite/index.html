@@ -22,19 +22,20 @@
     var CONFIG = {"hostname":"giagoo.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
-  <meta name="description" content="My Place">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="https://giagoo.github.io/tags/index.html">
+  <meta name="description" content="Windows dependencies Reference:https:&#x2F;&#x2F;github.com&#x2F;aseprite&#x2F;aseprite&#x2F;blob&#x2F;master&#x2F;INSTALL.md  Windows 10 (we don’t support cross-compiling and don’t know if this would be possible)    Visual Studio Comm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Compile Aseprite">
+<meta property="og:url" content="https://giagoo.github.io/2020/05/05/%E7%BC%96%E8%AF%91Aseprite/index.html">
 <meta property="og:site_name" content="BUSHLAND">
-<meta property="og:description" content="My Place">
+<meta property="og:description" content="Windows dependencies Reference:https:&#x2F;&#x2F;github.com&#x2F;aseprite&#x2F;aseprite&#x2F;blob&#x2F;master&#x2F;INSTALL.md  Windows 10 (we don’t support cross-compiling and don’t know if this would be possible)    Visual Studio Comm">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-01-06T07:55:06.000Z">
-<meta property="article:modified_time" content="2021-01-08T07:53:46.695Z">
+<meta property="article:published_time" content="2020-05-05T12:06:50.000Z">
+<meta property="article:modified_time" content="2021-01-08T11:54:17.453Z">
 <meta property="article:author" content="JiahaoChen">
+<meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://giagoo.github.io/tags/">
+<link rel="canonical" href="https://giagoo.github.io/2020/05/05/%E7%BC%96%E8%AF%91Aseprite/">
 
 
 <script id="page-configurations">
@@ -42,13 +43,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>tags | BUSHLAND
-</title>
+  <title>Compile Aseprite | BUSHLAND</title>
   
 
 
@@ -195,55 +195,251 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
-      <header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">tags
-</h1>
-
-<div class="post-meta">
   
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://giagoo.github.io/2020/05/05/%E7%BC%96%E8%AF%91Aseprite/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="JiahaoChen">
+      <meta itemprop="description" content="My Place">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BUSHLAND">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Compile Aseprite
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-05-05 20:06:50" itemprop="dateCreated datePublished" datetime="2020-05-05T20:06:50+08:00">2020-05-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-08 19:54:17" itemprop="dateModified" datetime="2021-01-08T19:54:17+08:00">2021-01-08</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/05/05/%E7%BC%96%E8%AF%91Aseprite/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/05/%E7%BC%96%E8%AF%91Aseprite/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="Windows-dependencies"><a href="#Windows-dependencies" class="headerlink" title="Windows dependencies"></a>Windows dependencies</h2><ul>
+<li><p>Reference:<a target="_blank" rel="noopener" href="https://github.com/aseprite/aseprite/blob/master/INSTALL.md">https://github.com/aseprite/aseprite/blob/master/INSTALL.md</a></p>
+</li>
+<li><p>Windows 10 (we don’t support cross-compiling and don’t know if this would be possible)  </p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://visualstudio.microsoft.com/zh-hans/downloads/?rr=https://github.com/aseprite/aseprite/blob/master/INSTALL.md">Visual Studio Community 2019</a>  </p>
+</li>
+<li><p>The <a target="_blank" rel="noopener" href="https://imgur.com/a/7zs51IT">Desktop development with C++ item + Windows 10.0.18362.0 SDK</a> from the Visual Studio installer  </p>
+</li>
+</ul>
+<a id="more"></a>
+
+<h2 id="Dependencies"><a href="#Dependencies" class="headerlink" title="Dependencies"></a>Dependencies</h2><ul>
+<li>The latest version of <a target="_blank" rel="noopener" href="https://cmake.org/">CMake</a>  </li>
+</ul>
+<blockquote>
+<p>just click next next and next  </p>
+</blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://ninja-build.org/">Ninja</a> build system  </li>
+</ul>
+<blockquote>
+<p>unpack and put it in …/CMake/bin</p>
+</blockquote>
+<ul>
+<li>And a compiled version of the <code>aseprite-m81</code> branch of the <a target="_blank" rel="noopener" href="https://github.com/aseprite/skia#readme">Skia library</a>. There are <a target="_blank" rel="noopener" href="https://github.com/aseprite/skia/releases">pre-built packages available</a>. You can get some extra information in the laf dependencies page.  </li>
+</ul>
+<blockquote>
+<p>download <code>pre-built packages available</code> and put it in C/:deps<br>if you choice compiling skia by youself , you need download <a target="_blank" rel="noopener" href="http://releases.llvm.org/9.0.0/LLVM-9.0.0-win64.exe">Clang</a> and <a target="_blank" rel="noopener" href="https://storage.googleapis.com/chrome-infra/depot_tools.zip">Google depot tools</a>, they should be install in C:/deps .<br>please check it in :<br><a target="_blank" rel="noopener" href="https://github.com/aseprite/skia#skia-on-windows">https://github.com/aseprite/skia#skia-on-windows</a></p>
+</blockquote>
+<ul>
+<li><em>In this case, C:\deps\skia is the directory where Skia was compiled or uncompressed.</em></li>
+</ul>
+<h2 id="Compiling"><a href="#Compiling" class="headerlink" title="Compiling"></a>Compiling</h2><ol>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/aseprite/aseprite/releases">Get Aseprite code</a>, put it in a folder like <code>C:\aseprite</code>, and create a <code>build</code> directory inside to leave all the files that are result of the compilation process (.exe, .lib, .obj, .a, .o, etc).</p>
+</li>
+<li><p>Open a developer command prompt or in the command line (cmd.exe) call:</p>
+<p> call “C:\Program Files (x86)\MicrosoftVisualStudio\2019\Community\Common7\Tools\VsDevCmd.bat”-arch=x64</p>
+</li>
+<li><p>and then</p>
+<p> cd aseprite<br> mkdir build<br> cd build<br> cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DLAF_BACKEND=skia-DSKIA_DIR=C:\deps\skia-DSKIA_LIBRARY_DIR=C:\deps\skia\out\Release-x64 -G Ninja..<br> ninja aseprite</p>
+</li>
+<li><p>wait it finish</p>
+</li>
+</ol>
+<p>百度网盘：</p>
+<p>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1AHQhZBW-x_DB_FjJrL9DDQ">https://pan.baidu.com/s/1AHQhZBW-x_DB_FjJrL9DDQ</a></p>
+<p>提取码：9527</p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>Donate comment here.</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="JiahaoChen 微信支付">
+        <p>微信支付</p>
+      </div>
+
+  </div>
 </div>
 
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-              目前共计 5 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Hexo/" style="font-size: 12px; color: #ccc">Hexo</a> <a href="/tags/Javascript/" style="font-size: 12px; color: #ccc">Javascript</a> <a href="/tags/%E4%BD%9C%E5%93%81/" style="font-size: 24px; color: #4f4f4f">作品</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 30px; color: #111">学习笔记</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 18px; color: #8e8e8e">游戏</a>
-            </div>
-          </div>
         
-      </div>
-      
-      
-      
-    </div>
-    
 
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>JiahaoChen
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://giagoo.github.io/2020/05/05/%E7%BC%96%E8%AF%91Aseprite/" title="Compile Aseprite">https://giagoo.github.io/2020/05/05/编译Aseprite/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://space.bilibili.com/37746460">
+            <span class="icon">
+              <i class="fab fa-youtube"></i>
+            </span>
+
+            <span class="label">Bilibili</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://www.artstation.com/jiahaochen">
+            <span class="icon">
+              <i class="fab fa-telegram"></i>
+            </span>
+
+            <span class="label">Artstation</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+      
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 学习笔记</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/02/Zbrush2020%E5%9F%BA%E7%A1%80/" rel="prev" title="Zbrush2020基础">
+      <i class="fa fa-chevron-left"></i> Zbrush2020基础
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/05/05/Godot-C-Visual-Studio-Code/" rel="next" title="Godot + C# + Visual Studio Code">
+      Godot + C# + Visual Studio Code <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
     
-    
-    
+  </article>
+  
+  
+  
+
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -290,6 +486,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows-dependencies"><span class="nav-number">1.</span> <span class="nav-text">Windows dependencies</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dependencies"><span class="nav-number">2.</span> <span class="nav-text">Dependencies</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Compiling"><span class="nav-number">3.</span> <span class="nav-text">Compiling</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
