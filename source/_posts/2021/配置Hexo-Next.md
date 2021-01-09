@@ -4,7 +4,7 @@ copyright: true
 comments: true
 date: 2021-01-08 18:34:03
 tags: Hexo
-categories: 博客
+categories: Hexo
 ---
 ## 切换主题
 
@@ -345,4 +345,80 @@ three:
   three_waves: false # 波浪形
   canvas_lines: false # 线形
   canvas_sphere: true # 球形
+```
+
+## 圆角设置
+
+在hexo/source/下新建_data文件夹，在此文件夹下新建variables.styl文件，写入代码：
+
+```bash
+// 圆角设置
+$border-radius-inner     = 20px 20px 20px 20px;
+$border-radius           = 20px;
+```
+
+此时在左下角会有小方块bug，在_data文件夹下新建styles.styl文件，写入代码：
+
+```bash
+.sidebar {
+box-shadow: none
+background: none
+}
+```
+
+在主题配置文件下启用Custom文件
+
+```bash
+# Define custom file paths.
+# Create your custom files in site directory `source/_data` and uncomment needed files below.
+custom_file_path:
+  #head: source/_data/head.swig
+  #header: source/_data/header.swig
+  #sidebar: source/_data/sidebar.swig
+  #postMeta: source/_data/post-meta.swig
+  #postBodyEnd: source/_data/post-body-end.swig
+  #footer: source/_data/footer.swig
+  #bodyEnd: source/_data/body-end.swig
+  variable: source/_data/variables.styl
+  #mixin: source/_data/mixins.styl
+  style: source/_data/styles.styl
+```
+
+## 自定义颜色
+
+在themes\next-7.7.2\source\css\_variables\base.styl文件中修改：
+
+```bash
+// Colors
+// colors for use across theme.
+// --------------------------------------------------
+$whitesmoke   = #F79F81; // 菜单栏当前菜单，归档线条
+$gainsboro    = #e3c6f0; // 菜单栏头像边框，分割线。单行代码块
+$grey-lighter = #cccedd; // 菜单栏子标题
+$grey-light   = #ab2acc; // 菜单栏文章计数器
+$grey         = #6a2dbb; // 时间节点
+$grey-dark    = #000000; // 菜单栏博主卡片区文字【描述|日志|分类|标签】
+$grey-dim     = #9059bf;
+$black-light  = #000000;  // 文章正文颜色
+$black-dim    = #5b2293;
+$black-deep   = #01A9DB;  // 菜单栏背景
+$red          = #ff2a2a;
+$blue-bright  = #87daff;
+$blue         = #0684bd;
+$blue-deep    = #262a30;
+$orange       = #fc6423;
+```
+
+### 修改文章阅读进度条
+
+修改主题配置文件：
+
+```bash
+# Reading progress bar
+reading_progress:
+  enable: true
+  # Available values: top | bottom
+  position: top
+  color: "#01A9DB"
+  height: 5px
 ```
