@@ -118,16 +118,13 @@ search:
 ## Plugins: http://hexo.io/plugins/
 plugins: hexo-generate-feed
 
-douban:
+  douban:
   user: 198538322
   builtin: true
-  book:
-    title: '读过的书籍'
-    quote: '积书须善学,隙土可深耕'
   movie:
-    title: '看过的电影'
+    title: '已看电影'
     quote: '就像眼泪在雨中消逝一般'
-  game:
-    title: '玩过的游戏'
-    quote: '恶就是恶，无论是大恶还是小恶。如果要让我在两者中选一个的话，我宁愿不选'
-  timeout: 10000
+    length: 2
+    valine_id: 
+    valine_key: 
+  timeout: 10000 
