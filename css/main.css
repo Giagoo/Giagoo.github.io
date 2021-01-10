@@ -1308,7 +1308,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #c6beff;
+  background: #25d2ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2847,9 +2847,6 @@ ul.breadcrumb li + li:last-child {
   box-shadow: none;
   background: none;
 }
-img.img-topic {
-  width: 100%;
-}
 .back-to-top {
   right: 60px;
   width: 70px;
@@ -2865,4 +2862,7 @@ img.img-topic {
 .back-to-top.back-to-top-on {
   bottom: unset;
   top: calc(100vh - 900px - 200px);
+}
+img.img-topic {
+  width: 100%;
 }
