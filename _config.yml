@@ -121,10 +121,13 @@ plugins: hexo-generate-feed
 douban:
   user: 198538322
   builtin: true
+  book:
+    title: '已读书籍'
+    quote: '积书须善学,隙土可深耕'
   movie:
     title: '已看电影'
-    quote: '就像眼泪消逝在雨中一般'
-    length: 2
-    valine_id: 
-    valine_key: 
+    quote: '就像眼泪消逝在雨中'
+  game:
+    title: '已玩游戏'
+    quote: '角色扮演游戏的精髓就在于绕来绕去'
   timeout: 10000 
