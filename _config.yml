@@ -118,12 +118,12 @@ search:
 ## Plugins: http://hexo.io/plugins/
 plugins: hexo-generate-feed
 
-  douban:
+douban:
   user: 198538322
   builtin: true
   movie:
     title: '已看电影'
-    quote: '就像眼泪在雨中消逝一般'
+    quote: '就像眼泪消逝在雨中一般'
     length: 2
     valine_id: 
     valine_key: 
