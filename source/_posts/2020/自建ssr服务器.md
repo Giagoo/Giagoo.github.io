@@ -1,7 +1,8 @@
 ---
 title: 自建ssr服务器
-date: 2020-02-25 13:47:43
 tags: 学习笔记
+abbrlink: 58af55fe
+date: 2020-02-25 13:47:43
 ---
 ## Dependencies（旧版）
 

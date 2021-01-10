@@ -1,7 +1,8 @@
 ---
 title: Compile Aseprite
-date: 2020-05-05 20:06:50
 tags: 学习笔记
+abbrlink: 4f85d45a
+date: 2020-05-05 20:06:50
 ---
 ## Windows dependencies
 

@@ -1,7 +1,8 @@
 ---
 title: Javascript
-date: 2019-06-21 23:47:10
 tags: Javascript
+abbrlink: cbb79327
+date: 2019-06-21 23:47:10
 ---
 ## 索引
 

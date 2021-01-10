@@ -2,9 +2,11 @@
 title: 配置Hexo Next
 copyright: true
 comments: true
-date: 2021-01-08 18:34:03
 tags: Hexo
 categories: Hexo
+abbrlink: cdf1e5ae
+date: 2021-01-08 18:34:03
+image: https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2969235134,2098148338&fm=11&gp=0.jpg
 ---
 ## 切换主题
 
@@ -422,3 +424,141 @@ reading_progress:
   color: "#01A9DB"
   height: 5px
 ```
+
+## 永久性链接
+
+安装：`npm install hexo-abbrlink --save`
+
+在站点配置文件中修改：
+
+```bash
+-permalink: :year/:month/:day/:title/
++permalink: posts/:abbrlink/
++abbrlink:
++  alg: crc32  #support crc16(default) and crc32
++  rep: hex    #support dec(default) and hex
+```
+
+修改完成后，原链接从:year/:month/:day/:title/变为<https://giagoo.github.io/posts/cdf1e5ae/>
+
+## 文章摘要图片
+
+在主题配置文件中false Excerpt
+
+```bash
+# Automatically excerpt description in homepage as preamble text.
+excerpt_description: false
+
+# Read more button
+# If true, the read more button will be displayed in excerpt section.
+read_more_btn: false
+```
+
+在themes\Next\layout\_macro\post.swig中插入代码：
+
+```bash
+          <!--noindex-->
+          {%- if theme.read_more_btn %}
+            <div class="post-button">
+              <a class="btn" href="{{ url_for(post.path) }}">
+                {{ __('post.read_more') }} &raquo;
+              </a>
+            </div>
+          {%- endif %}
+          <!--/noindex-->
+        {% elif post.excerpt %}
+          {{ post.excerpt }}
+  
+ +        {% if post.image %}
+ +        <div class="out-img-topic">
+ +        <img src={{ post.image }} class="img-topic" />
+ +        </div>
+ +        {% endif %}
+
+```
+
+在hexo/source/_data/styles.styl中加入：
+
+```bash
+// 图片宽度统一
+img.img-topic {
+    width: 100%;
+}
+```
+
+最后在帖子的front-matter（tags所在的区域）中加入一行：
+
+image: url
+
+## 自定义回到顶部
+
+将图片素材放到source/images 目录下  
+图片下载：<http://yearito.cn/images/scroll.png>
+
+在自定义样式文件中添加一下代码：
+
+```bash
+//自定义回到顶部样式
+.back-to-top {
+  right: 60px;
+  width: 70px;  //图片素材宽度
+  height: 900px;  //图片素材高度
+  top: -900px;
+  bottom: unset;
+  transition: all .5s ease-in-out;
+  background: url("/images/scroll.png");
+
+  //隐藏箭头图标
+  > i {
+    display: none;
+  }
+
+  &.back-to-top-on {
+    bottom: unset;
+    top: 100vh < (900px + 200px) ? calc( 100vh - 900px - 200px ) : 0px;
+  }
+}
+```
+
+## 添加豆瓣读书与电影
+
+### 安装
+
+`npm install hexo-douban --save`
+
+### 配置
+
+在站点配置文件下新增：
+
+```bash
+douban:
+  user: your douban id
+  builtin: true
+  book:
+    title: '读过的书籍'
+    quote: '积书须善学,隙土可深耕'
+  movie:
+    title: '看过的电影'
+    quote: '就像眼泪在雨中消逝一般'
+  game:
+    title: '玩过的游戏'
+    quote: '恶就是恶，无论是大恶还是小恶。如果要让我在两者中选一个的话，我宁愿不选'
+  timeout: 10000
+```
+
+### 使用
+
+```bash
+$ hexo douban -h
+Usage: hexo douban
+
+Description:
+Generate pages from douban
+
+Options:
+  -b, --books   Generate douban books only
+  -g, --games   Generate douban games only
+  -m, --movies  Generate douban movies only
+```
+
+注意：安装了hexo douban之后，就不能用hexo d了，因为hexo douban跟hexo deploy的前缀都是hexo d，需要使用全称

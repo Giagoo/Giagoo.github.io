@@ -1,7 +1,8 @@
 ---
-title: 'Godot + C# + Visual Studio Code'
-date: 2020-05-05 23:12:43
+title: Godot + C# + Visual Studio Code
 tags: 学习笔记
+abbrlink: cb978cb1
+date: 2020-05-05 23:12:43
 ---
 ## Dependencies
 
