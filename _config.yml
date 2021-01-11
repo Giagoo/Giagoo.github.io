@@ -121,9 +121,9 @@ plugins: hexo-generate-feed
 douban:
   user: 198538322
   builtin: true
-  book:
-    title: '已读书籍'
-    quote: '积书须善学,隙土可深耕'
+  #book:
+    #title: '已读书籍'
+    #quote: '积书须善学,隙土可深耕'
   movie:
     title: '已看电影'
     quote: '就像眼泪消逝在雨中'
