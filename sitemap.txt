@@ -1,3 +1,4 @@
+https://giagoo.github.io/404/404.html
 https://giagoo.github.io/categories/index.html
 https://giagoo.github.io/2023/03/26/hello-hexo/
 https://giagoo.github.io/tags/index.html
