@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello Hexo</title>
+    <url>/2023/03/26/hello-hexo/</url>
+    <content><![CDATA[<h2 id="安装Git-Nodejs"><a href="#安装Git-Nodejs" class="headerlink" title="安装Git Nodejs"></a>安装Git Nodejs</h2><p><a href="https://nodejs.org/download/release/v16.19.1/">Node</a>(Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)<br>版本过高在下载hexo好像会卡死，详情参见：<a href="https://stackoverflow.com/questions/70678583/stop-npm-install-at-idealtreeregal-sill-idealtree-bui">stop “npm install” at [………………] | idealTree:regal: sill idealTree buildDeps</a>,我所使用的版本为16.19.1</p>
+<img src="/2023/03/26/hello-hexo/cmd.png" class="">
+
+<p><code>使用 Node.js 官方安装程序时，请确保勾选 Add to PATH 选项（默认已勾选）</code></p>
+<p><a href="https://git-scm.com/download/win">Git</a></p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><pre><code>npm install -g hexo-cli  
+</code></pre>
+<img src="/2023/03/26/hello-hexo/hexo_cli.png" class="">
+
+<h2 id="建站"><a href="#建站" class="headerlink" title="建站"></a><a href="https://hexo.io/zh-cn/docs/setup">建站</a></h2><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a><a href="https://hexo.io/zh-cn/docs/configuration">配置</a></h2>]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+</search>
